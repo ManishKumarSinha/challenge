@@ -46,7 +46,7 @@ public class TransferControllerTest {
 
         doNothing().when(transferService).transferMoney(transferRequest);
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/transfer")
+        mockMvc.perform(MockMvcRequestBuilders.post("/v1/transfer")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"accountFromId\":123456,\"accountToId\":654321,\"amount\":100.00}"))
                 .andExpect(status().isOk())
