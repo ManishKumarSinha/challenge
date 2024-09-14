@@ -17,6 +17,8 @@ import java.util.concurrent.ConcurrentHashMap;
 public class AccountsRepositoryInMemory implements AccountsRepository {
 
     private final Map<String, Account> accounts = new ConcurrentHashMap<>();
+    private final Map<Long, TransferAccount> transferFromAccountMap = new ConcurrentHashMap<>();
+    private final Map<Long, TransferAccount> transferToAccountMap = new ConcurrentHashMap<>();
 
     @Override
     public void createAccount(Account account) throws DuplicateAccountIdException {
@@ -36,9 +38,6 @@ public class AccountsRepositoryInMemory implements AccountsRepository {
     public void clearAccounts() {
         accounts.clear();
     }
-
-    private final Map<Long, TransferAccount> transferFromAccountMap = new ConcurrentHashMap<>();
-    private final Map<Long, TransferAccount> transferToAccountMap = new ConcurrentHashMap<>();
 
     @Override
     public Optional<TransferAccount> findByIdFrom(Long accountId) throws AccountNotFoundException {
