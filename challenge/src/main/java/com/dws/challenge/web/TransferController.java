@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/transfer")
+@RequestMapping("/v1/transfer")
 public class TransferController {
 
     private final TransferService transferService;
