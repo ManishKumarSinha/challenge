@@ -27,7 +27,8 @@ Describing any extra work you would consider important to do before this project
    - Alerts & Dashboards:
        Configure alert systems and dashboards (In DataDog) to monitor critical metrics like transaction failures, server health, response times, and database load.
 
-
+Use Karate framework
+  - Essential for testing web services, It ensures that the web services work as expected in a variety of scenarios.
 
  
 
